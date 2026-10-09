@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="HongguoL macOS ARM64 2.3.4">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#191c27"/><stop offset="1" stop-color="#292633"/></linearGradient><linearGradient id="accent"><stop stop-color="#ff7954"/><stop offset="1" stop-color="#ffc29d"/></linearGradient></defs>
+<rect width="1280" height="320" rx="26" fill="url(#bg)"/><circle cx="1160" cy="40" r="175" fill="#ff8c65" opacity=".045"/>
+<rect x="64" y="54" width="156" height="28" rx="14" fill="#ff875f" opacity=".13"/>
+<text x="142" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" letter-spacing="2" fill="#ffb193">APPLE SILICON</text>
+<text x="64" y="150" font-family="Arial,sans-serif" font-size="58" font-weight="700" fill="#f6f7fb">HongguoL</text>
+<text x="68" y="194" font-family="Arial,sans-serif" font-size="25" fill="#bcc0ce">macOS ARM64</text>
+<text x="68" y="251" font-family="Arial,sans-serif" font-size="14" fill="#8f95a8">2.3.4  /  Independent Electron Client  /  MIT</text>
+<rect x="865" y="64" width="265" height="174" rx="15" fill="#15171f" stroke="#424656" stroke-width="2"/>
+<rect x="878" y="77" width="239" height="148" rx="8" fill="#222530"/><rect x="892" y="92" width="43" height="116" rx="5" fill="#2d303c"/>
+<path d="M904 108h18M904 125h18M904 142h18" stroke="#9d8690" stroke-width="4" stroke-linecap="round"/>
+<rect x="951" y="92" width="151" height="116" rx="6" fill="#0b0d12"/><circle cx="1026" cy="149" r="28" fill="url(#accent)"/>
+<path d="M1020 135v28l21-14z" fill="#fff"/><path d="M844 240h307l-23 15H867z" fill="#414553"/>
+<rect x="972" y="240" width="56" height="5" rx="2" fill="#646a7c"/>
+</svg>

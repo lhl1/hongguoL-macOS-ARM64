@@ -1,0 +1,11 @@
+import fs from 'node:fs';import path from 'node:path';
+import {nativeResources,runtimePaths} from '../electron/runtime-platform.mjs';
+if(process.platform!=='darwin'||process.arch!=='arm64')throw new Error('Interactive startup requires macOS ARM64. Source build and offline tests can run on other hosts.');
+const root=nativeResources(path.resolve(import.meta.dirname,'../electron'));
+const required=['libmetasec_ml.so','libEncryptor.so','msconfig.json','jre/bin/java','jars/apk-native-adapter.jar','media/ffmpeg'];
+const missing=required.filter(name=>!fs.existsSync(path.join(root,name)));
+if(missing.length)throw new Error('Local runtime resources are missing: '+missing.join(', ')+'. See docs/BUILD_MACOS.md.');
+const config=JSON.parse(fs.readFileSync(path.join(root,'msconfig.json'),'utf8'));
+if(!Array.isArray(config)||![6,7,8,9,13].every(i=>config[i]===''))throw new Error('SDK configuration must not contain captured guest/account fields.');
+for(const file of Object.values(runtimePaths(root)))fs.accessSync(file,fs.constants.X_OK);
+console.log('Local ARM64 runtime checked; no private values printed.');
