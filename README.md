@@ -6,7 +6,7 @@
 
 独立 Electron 客户端 · Apple Silicon · macOS 13 及以上 · 源码版本 2.3.4
 
-[功能介绍](#可以做什么) · [开始使用](#怎样开始) · [开发历程](docs/DEVELOPMENT_HISTORY.md) · [问题排查](docs/TROUBLESHOOTING.md) · [MIT 许可](LICENSE)
+[下载 2.3.4](https://github.com/lhl1/hongguoL-macOS-ARM64/releases/tag/Hongguo-2.3.4-macOS-arm64) · [功能介绍](#可以做什么) · [开发历程](docs/DEVELOPMENT_HISTORY.md) · [问题排查](docs/TROUBLESHOOTING.md) · [MIT 许可](LICENSE)
 
 </div>
 
@@ -20,7 +20,7 @@ HongguoL 是根据原 Android 应用的业务和接口重新编写的桌面客�
 
 本仓库是 **macOS ARM64 分支**。2.3.4 的界面和业务与 [Windows 分支](https://github.com/lhl1/hongguoL-desktop) 共用，Mac 播放沿用用户确认能正常播放的 `.13` 方案。本次面向 Apple Silicon，没有交付 Intel Mac 或 iPhone/iPad 版本。
 
-> **先读这一点：** 仓库公开源码、文档和构建工具。专有 APK 组件、SDK 配置、JRE/FFmpeg 二进制和历史安装包没有上传。只有 `git clone` 不能得到完整播放器。已有本地 ZIP 的用户看[安装说明](docs/INSTALL_MACOS.md)，想研究源码的用户看[构建说明](docs/BUILD_MACOS.md)。
+> **先读这一点：** Git 源码树公开源码、文档和构建工具，不包含专有 APK 组件、SDK 配置或 JRE/FFmpeg 二进制。维护者另外在 Releases 发布完整安装 ZIP。普通用户下载安装包；开发者克隆源码并自行准备运行资源。只有 `git clone` 不能得到完整播放器。
 
 ## 可以做什么
 
@@ -67,7 +67,7 @@ HongguoL 是根据原 Android 应用的业务和接口重新编写的桌面客�
 
 ### 只想安装使用
 
-如果已经持有本地 macOS ARM64 安装 ZIP：
+从 [2.3.4 发布页](https://github.com/lhl1/hongguoL-macOS-ARM64/releases/tag/Hongguo-2.3.4-macOS-arm64) 下载 `Hongguo-2.3.4-macOS-arm64.zip`，然后：
 
 1. 解压到新目录，手动退出旧红果。
 2. 在解压目录运行 `sh 准备Mac版.command`。
@@ -76,7 +76,7 @@ HongguoL 是根据原 Android 应用的业务和接口重新编写的桌面客�
 
 已有安装先备份，自检失败不替换旧版。不要直接打开 Downloads 里的源应用，也不要为了运行它关闭全局系统安全检查。详细步骤和写入位置见[安装说明](docs/INSTALL_MACOS.md)。
 
-**当前仓库没有发布可下载的完整成品包。** 已有本地 ZIP 不随这次源码开源自动公开分发。
+安装包约 242 MB，保留整个解压目录。历史可播放基线见 [.13 发布页](https://github.com/lhl1/hongguoL-macOS-ARM64/releases/tag/Hongguo-0.6.0.13-macOS-arm64)。完整成品含第三方运行组件，MIT 只覆盖项目原创部分；下载包与 GitHub 自动生成的 Source code 压缩包用途不同。
 
 ### 想阅读或修改源码
 
@@ -103,7 +103,7 @@ npm start
 npm run pack:mac -- --baseline "/你的路径/原始-.13-macOS-arm64.zip"
 ```
 
-脚本校验基线 SHA256，直接保留原生组件与 FFmpeg 供应商签名，用新源码更新应用。输出为 `release-macos-2.3.4-arm64/`；已存在时拒绝覆盖，先备份移开。**基线不在仓库，脚本不会自动下载它。** Java 重建方法、依赖和签名流程见[构建说明](docs/BUILD_MACOS.md)。
+脚本校验基线 SHA256，直接保留原生组件与 FFmpeg 供应商签名，用新源码更新应用。输出为 `release-macos-2.3.4-arm64/`；已存在时拒绝覆盖，先备份移开。**基线不在 Git 源码树，可从 .13 发布页自行下载；脚本只读取本地 ZIP。** Java 重建方法、依赖和签名流程见[构建说明](docs/BUILD_MACOS.md)。
 
 ## Mac 播放为什么单独处理
 
@@ -166,4 +166,4 @@ GitHub Actions 配置只做源码构建与离线检查，不携带私有资源�
 
 原创源码、文档、测试和矢量标识采用 [MIT License](LICENSE)。MIT 不覆盖原 APK、专有库/SDK、官方品牌、影视内容及第三方组件。
 
-没有预置他人账号、设备身份、播放密钥或捕获响应；没有上传原 APK、官方图标、第三方二进制、用户截图、日志或完整历史包。本地资源分别遵循各自条件，见[第三方说明](THIRD_PARTY_NOTICES.md)。维护时应更新真实契约和测试，保留预约及锁定状态，不伪造数据代替失败响应。
+Git 源码树没有预置他人账号、设备身份、播放密钥或捕获响应；不包含原 APK、官方图标、第三方二进制、用户截图、日志或完整安装 ZIP。Releases 中的成品另行发布，内含运行组件，分别遵循原条款，见[第三方说明](THIRD_PARTY_NOTICES.md)。维护时应更新真实契约和测试，保留预约及锁定状态，不伪造数据代替失败响应。

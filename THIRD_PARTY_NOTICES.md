@@ -8,11 +8,11 @@ React、React DOM、Electron、Vite、TypeScript 及构建工具通过 npm 安�
 
 ## 本地原生运行资源
 
-本仓库不分发以下二进制，也不在 GitHub Actions 中打包它们：
+Git 源码树不包含以下二进制，也不在 GitHub Actions 中打包它们。维护者另行上传的 Release 成品包含运行组件，许可证范围与原创 MIT 源码分开：
 
 - 原 APK 的 `libmetasec_ml.so`、`libEncryptor.so` 及 SDK 配置。需要用户自行提供可使用的原文件，不属于 MIT 许可范围。Android ARM JNI 通过 unidbg 在本机进程内调用，没有 Android 系统或模拟器界面。
 - unidbg、Unicorn 等 JNI 适配器依赖。Maven 解析的依赖均保留其原许可证与 NOTICE。项目上游：<https://github.com/zhkl0228/unidbg>、<https://github.com/unicorn-engine/unicorn>。
 - JDK/JRE。使用 JDK 17 的 jlink 生成运行时，需要保留所用发行版的 `legal` 目录及源代码/许可证信息。
 - FFmpeg。Mac 构建直接保留用户自行提供的已验证 `.13` 基线中的 ARM64 二进制与供应商签名，不重新签此组件。其配置可能启用 GPL，须遵循所选发行版对应的分发条件和源码要求；本仓库不以 MIT 覆盖 FFmpeg，也不分发这个二进制。上游：<https://ffmpeg.org/>。
 
-原 APK、官方图标、字体、剧集封面、视频、捕获的网络响应与现有含专有组件的成品包不随源码发布。应用运行时可以从服务获取内容，但没有内容再分发许可，也没有服务可用性保证。
+原 APK、官方图标、字体、剧集封面、视频、捕获的网络响应与含专有组件的成品包不进入 Git 源码树。已有 Release 安装包沿用原资源和通知，不能视为第三方组件被重新授予 MIT 许可。应用运行时可以从服务获取内容，但没有内容再分发许可，也没有服务可用性保证。

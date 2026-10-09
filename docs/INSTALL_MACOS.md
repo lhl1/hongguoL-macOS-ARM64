@@ -4,7 +4,9 @@
 
 ## 安装前
 
-Apple Silicon Mac，最低 macOS 13。仓库没有完整成品下载；以下步骤用于你自行持有或本地构建的 ZIP。解压到新目录，不覆盖旧 `.13`。不要只复制单独 `.app`，准备脚本、权限配置和校验清单也要保留。
+Apple Silicon Mac，最低 macOS 13。从 [2.3.4 发布页](https://github.com/lhl1/hongguoL-macOS-ARM64/releases/tag/Hongguo-2.3.4-macOS-arm64) 下载 `Hongguo-2.3.4-macOS-arm64.zip`，不是 Source code 压缩包。以下步骤也适用于本地重建 ZIP。解压到新目录，不覆盖旧 `.13`；不要只复制单独 `.app`，准备脚本、权限配置和校验清单也要保留。
+
+已发布 2.3.4 成品 SHA256：`6b9be852748f8ed9ca9e7097ee960fe18afa9041fdbfbdc2be9e0e0366b3ab8e`。本地重建包因原创标识和说明变化会有不同哈希。
 
 ## 安装步骤
 

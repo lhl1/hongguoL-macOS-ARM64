@@ -31,7 +31,7 @@ npm 按锁文件下载依赖，包括 Electron。build 运行 TypeScript 和 Vit
 4c03646010252092f61a8da4c152825c51b1e95f2098087af68e7f8b453bef45
 ```
 
-这是文件校验值，不是播放密钥或下载地址。用 `shasum -a 256 文件.zip` 比较。基线没有放入仓库，脚本也不会下载；不要绕过哈希检查接受未知组件。
+这是文件校验值，不是播放密钥。用 `shasum -a 256 文件.zip` 比较。基线不在 Git 源码树，可从 [.13 发布页](https://github.com/lhl1/hongguoL-macOS-ARM64/releases/tag/Hongguo-0.6.0.13-macOS-arm64) 自行下载；脚本不自动下载，不要绕过哈希检查接受未知组件。
 
 在 Apple Silicon Mac 上：
 
